@@ -54,7 +54,7 @@
     {%- endfor %}
     {{- macros::pagination(paginator=paginator, config=config) }}
     </div>
-  {%- set section_item = get_section(path="_index.md") %}
+  {%- set section_item = get_section(path="blog/_index.md") %}
   {%- if config.extra.recent | default(value=true) %}
     <div class="toc">
       <div class="toc-sticky">

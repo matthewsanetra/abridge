@@ -2,9 +2,13 @@
 //@import "fonts/Roboto";
 //@import "fonts/Arimo";
 //@import "fonts/Lato";
-//@import "fonts/FiraCode"; // Monospaced
+// @import "fonts/FiraCode"; // Monospaced
 @import "imports";
-@import "syntax/syntax-abridge-switcher";
+// @import "syntax/syntax-abridge-switcher";
+@import "syntax/syntax-ayumirage-abridge-switcher.scss";
+// @import "syntax/syntax-charcoal-abridge-switcher.scss";
+// @import "syntax/syntax-dracula-abridge-switcher.scss";
+// @import "syntax/syntax-material-abridge-switcher.scss";
 
 :root:not(.light) {
   --f1: #ccc;// Font Color Primary

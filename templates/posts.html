@@ -4,7 +4,7 @@
 
 {%- block seo %}
   {{- super() }}
-  {%- set title = "Posts" %}
+  {%- set title = section.title %}
 
   {%- if config.title %}
     {%- set title_addition = title_separator ~ config.title %}
@@ -18,7 +18,7 @@
 {%- endblock seo %}
 
 {%- block content %}
-{%- set section_item = get_section(path="_index.md") %}
+{%- set section_item = get_section(path="blog/_index.md") %}
     <div>
       {%- for year, posts in section_item.pages | group_by(attribute="year") %}
       <h2>{{ year }}</h2>
