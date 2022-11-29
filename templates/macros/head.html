@@ -1,5 +1,15 @@
 {#- Theme Switcher Button to toggle between dark/light #}
 {%- macro theme(config) %}
+  {%- if config.extra.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ config.extra.google_analytics }}');
+  </script>
+  {%- endif %}
   {%- if config.extra.js_theme %}
   {%- if config.extra.js_themeButton or config.extra.js_bundle %}
   <script src="{{ get_url(path=config.extra.js_theme, trailing_slash=false) | safe }}"{%- if config.extra.integrity %} integrity="sha384-{{ get_file_hash(path=config.extra.js_theme, sha_type=384, base64=true) | safe }}"{%- endif %}></script>
